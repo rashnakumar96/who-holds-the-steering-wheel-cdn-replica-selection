@@ -227,17 +227,17 @@ def CDNFinder(domains):
 if __name__ == "__main__":
 	if not os.path.exists("results"):
 		os.mkdir("results")
-	# top50Sites=[] #add the top 50 sites of the country of a client from similarweb rankings
+	top50Sites=[] #add the top 50 sites of the country of a client from similarweb rankings
 	
-	# country=clientCountry #specify the client's two letter country code
-	# if not os.path.exists("results/"+country):
-	# 	os.mkdir("results/"+country)
+	country=clientCountry #specify the client's two letter country code
+	if not os.path.exists("results/"+country):
+		os.mkdir("results/"+country)
 
-	# print ("Extracting Resources")
-	# extractResources(country,top50Sites)
+	print ("Extracting Resources")
+	extractResources(country,top50Sites)
 	
-	# all_domains=json.load(open("results/"+country+"/ResourcesDomains.json"))
-	# CDNFinder(all_domains)
+	all_domains=json.load(open("results/"+country+"/ResourcesDomains.json"))
+	CDNFinder(all_domains)
 	# findcdn = Url_processor(country)
 	# findcdn.find_cdn(all_domains)
 
