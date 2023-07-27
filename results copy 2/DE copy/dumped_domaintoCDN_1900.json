@@ -1,0 +1,256 @@
+{
+    "date": "04/08/2023, 13:08:12",
+    "cdn_count": "50",
+    "domains": {
+        "d.turn.com": {
+            "IP": "'46.228.164.13'",
+            "cdns": "'.akadns.net'",
+            "cdns_by_names": "'Akamai'"
+        },
+        "photorankstatics-a.akamaihd.net": {
+            "IP": "'23.48.23.43'",
+            "cdns": "'.akamaihd.net', '.edgesuite.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai', 'Akamai'"
+        },
+        "fastlane.rubiconproject.com": {
+            "IP": "'213.19.162.51'",
+            "cdns": "'.akadns.net'",
+            "cdns_by_names": "'Akamai'"
+        },
+        "frauporno.com": {
+            "IP": "'188.114.97.3', '188.114.96.3'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "static.pornohammer.com": {
+            "IP": "'104.21.234.39'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "media.douglas.de": {
+            "IP": "'23.197.123.249'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "assets.autouncle.com": {
+            "IP": "'172.66.41.42'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "js.hsadspixel.net": {
+            "IP": "'104.16.121.190'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "2022welcome.com": {
+            "IP": "'104.21.235.96', '104.21.235.95'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "cdn.public.zooplus.net": {
+            "IP": "'18.66.122.46', '18.66.122.32'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "lichess1.org": {
+            "IP": "'104.22.62.235', '172.67.21.43'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "smythstoys.com": {
+            "IP": "'45.60.169.51', '45.60.153.51'",
+            "cdns": "'x.incapdns.net'",
+            "cdns_by_names": "'Incapsula'"
+        },
+        "o248881.ingest.sentry.io": {
+            "IP": "'34.120.195.249'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "home.mobile.de": {
+            "IP": "'96.7.226.234', '91.211.75.124'",
+            "cdns": "'.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai'"
+        },
+        "data.statista.com": {
+            "IP": "'216.239.34.21', '142.250.185.115'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "lf16-tiktok-common.ttwstatic.com": {
+            "IP": "'184.24.77.6', '184.24.77.18'",
+            "cdns": "'.edgesuite.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "qvc.scene7.com": {
+            "IP": "'184.51.104.75'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "metrics.media-amazon.com": {
+            "IP": "'146.75.117.51', '146.75.121.51'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "rp-online.de": {
+            "IP": "'104.17.71.237', '91.215.73.131'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "tchibo.de": {
+            "IP": "'35.190.22.178', '95.101.46.218', '104.126.249.186'",
+            "cdns": "'.edgekey.net', 'googlehosted.com', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Google', 'Akamai'"
+        },
+        "tm.roller.de": {
+            "IP": "'216.239.36.21', '142.250.185.115'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "stuttgarter-nachrichten.de": {
+            "IP": "'195.50.176.82', '18.66.112.37', '18.66.112.27'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "xxxdan.com": {
+            "IP": "'104.21.66.85', '172.67.157.253'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "image.bz-berlin.de": {
+            "IP": "'184.24.77.16', '184.24.77.28'",
+            "cdns": "'.edgesuite.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "futbin.com": {
+            "IP": "'104.19.129.70', '104.19.143.69'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "0f73e92f-4074-4fe3-85d3-ed3fc969859e.edge.permutive.app": {
+            "IP": "'104.18.1.175'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "display.apester.com": {
+            "IP": "'146.75.122.217'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "p.typekit.net": {
+            "IP": "'184.24.77.154', '184.24.77.146'",
+            "cdns": "'.edgesuite.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "atinternet.zdf.de": {
+            "IP": "'104.68.71.129', '23.220.21.7'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "resources.digital-cloud-west.medallia.com": {
+            "IP": "'146.75.121.230', '146.75.117.230'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "gen.jut.su": {
+            "IP": "'104.26.11.147'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "image.brigitte.de": {
+            "IP": "'23.36.162.220', '23.36.162.216'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "ai.trk42.net": {
+            "IP": "'216.239.34.21', '216.239.38.21'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "images.parfumo.de": {
+            "IP": "'172.67.75.158'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "c.mgid.com": {
+            "IP": "'104.19.134.78'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "widgets.outbrain.com": {
+            "IP": "'184.51.105.91'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "cdn.cdn4js.com": {
+            "IP": "'188.114.97.3'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "platform-lookaside.fbsbx.com": {
+            "IP": "'157.240.251.9', '157.240.251.6'",
+            "cdns": "'.facebook.com', '.cdninstagram.com'",
+            "cdns_by_names": "'Facebook', 'Facebook'"
+        },
+        "images.noz-mhn.de": {
+            "IP": "'13.32.121.53', '13.32.121.113'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "img.strpst.com": {
+            "IP": "'104.18.63.124'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "tm.swp.de": {
+            "IP": "'34.160.224.132'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "dubisthalle.de": {
+            "IP": "'217.160.0.229', '172.67.198.215'",
+            "cdns": "'.cloudflare.net', '.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare', 'Cloudflare'"
+        },
+        "awin1.com": {
+            "IP": "'99.86.4.73', '23.2.214.113', '99.86.4.118'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "navigation.immowelt.org": {
+            "IP": "'2.16.215.101'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "thumb-v-lv.xhcdn.com": {
+            "IP": "'8.247.50.121'",
+            "cdns": "'.fpbns.net'",
+            "cdns_by_names": "'Level3'"
+        },
+        "googleapis.com": {
+            "IP": "'142.250.186.68', '216.58.212.170'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "pur.autobild.de": {
+            "IP": "'35.195.45.116'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "cdn.evgnet.com": {
+            "IP": "'151.101.128.114', '54.163.120.134', '151.101.0.114', '52.207.148.175'",
+            "cdns": "'.nocookie.net'",
+            "cdns_by_names": "'Fastly'"
+        },
+        "cms-images.mmst.eu": {
+            "IP": "'104.18.1.81'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "content.services.dmtech.com": {
+            "IP": "'35.201.94.164'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        }
+    }
+}

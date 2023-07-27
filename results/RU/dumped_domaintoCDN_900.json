@@ -1,0 +1,181 @@
+{
+    "date": "04/08/2023, 04:54:12",
+    "cdn_count": "35",
+    "domains": {
+        "cm.rtbsystem.com": {
+            "IP": "'188.114.96.13'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "petadopt.ru": {
+            "IP": "'188.143.254.40', '172.67.133.10'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "market.csgo.com": {
+            "IP": "'195.85.59.95'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "static.life.ru": {
+            "IP": "'212.193.146.233'",
+            "cdns": "'.ngenix.net'",
+            "cdns_by_names": "'NGENIX'"
+        },
+        "uchi.ru": {
+            "IP": "'104.16.43.97'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "p77-sign-sg.tiktokcdn.com": {
+            "IP": "'138.199.37.210', '138.199.37.200'",
+            "cdns": "'.cdn77.org'",
+            "cdns_by_names": "'CDN77'"
+        },
+        "o278969.ingest.sentry.io": {
+            "IP": "'34.120.195.249'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "h5.zuimeitianqi.com": {
+            "IP": "'52.85.242.52', '52.85.242.121'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "mem.gfx.ms": {
+            "IP": "'13.107.238.53'",
+            "cdns": "'.azureedge.net'",
+            "cdns_by_names": "'MicrosoftAzure'"
+        },
+        "sessions.bugsnag.com": {
+            "IP": "'35.190.88.7'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "8649452.fls.doubleclick.net": {
+            "IP": "'142.250.186.70'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "cdn2.ozone.ru": {
+            "IP": "'84.15.67.9', '84.15.67.82'",
+            "cdns": "'.edgesuite.net'",
+            "cdns_by_names": "'Akamai'"
+        },
+        "readmanga.live": {
+            "IP": "'172.67.218.185', '104.21.45.200'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "cs1.livemaster.ru": {
+            "IP": "'151.236.71.248'",
+            "cdns": "'.panthercdn.com'",
+            "cdns_by_names": "'CDNetworks'"
+        },
+        "rf.bongacams.com": {
+            "IP": "'195.85.23.87'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "support.google.com": {
+            "IP": "'142.250.186.142', '216.239.32.27'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "cdnvideo-static-ssl.domashniy.ru": {
+            "IP": "'151.236.71.248'",
+            "cdns": "'.panthercdn.com'",
+            "cdns_by_names": "'CDNetworks'"
+        },
+        "polyfill.io": {
+            "IP": "'151.101.193.26', '151.101.85.26'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "utro-novosti.ru": {
+            "IP": "'188.114.98.238', '188.114.99.238'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "a.pub.network": {
+            "IP": "'104.18.20.206'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "data.ad-score.com": {
+            "IP": "'130.211.115.4'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "u.openx.net": {
+            "IP": "'35.244.159.8'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "static.mangahub.ru": {
+            "IP": "'188.114.96.13'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "rtb-eu-warsaw.intent.ai": {
+            "IP": "'104.26.14.69'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "play.google.com": {
+            "IP": "'142.250.184.238'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "p4-fxed5vbubflys-sgusyh6hywz2bgky-if-v6exp3-v4.metric.gstatic.com": {
+            "IP": "'142.250.184.227', '142.250.186.35'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "popcornnews.ru": {
+            "IP": "'188.114.99.238', '104.26.3.198'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "11543945.fls.doubleclick.net": {
+            "IP": "'142.250.186.70'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "img5.24fastload.com": {
+            "IP": "'104.27.204.89'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "gigporno.red": {
+            "IP": "'188.114.96.13'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "s.tribalfusion.com": {
+            "IP": "'104.18.25.173'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "m.tiktok.com": {
+            "IP": "'84.15.67.10', '84.15.67.80'",
+            "cdns": "'.edgesuite.net'",
+            "cdns_by_names": "'Akamai'"
+        },
+        "aps.letu.ru": {
+            "IP": "'212.193.146.48'",
+            "cdns": "'.ngenix.net'",
+            "cdns_by_names": "'NGENIX'"
+        },
+        "1000.menu": {
+            "IP": "'188.114.99.238', '172.67.68.37'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "stats.klops.ru": {
+            "IP": "'104.21.81.173'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        }
+    }
+}

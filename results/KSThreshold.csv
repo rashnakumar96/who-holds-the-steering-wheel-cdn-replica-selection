@@ -1,0 +1,172 @@
+Country  	CDN           	  percentage of resources	  bytes of resources	  ('local', 'same_R')	  ('local', 'neigh_subR')	  ('local', 'non-neigh_R')	label
+US       	EdgeCast      	                5.55409  	           3.27982  	           0.190476  	                0.691877 	                1         	Regional Anycast
+US       	Cloudfront    	                7.04702  	           9.51724  	           1         	                1        	                1         	DNS
+US       	Fastly        	               14.1697   	          19.3214   	           0.555556  	                0.134409 	                0.273743  	Anycast
+US       	Akamai        	               25.9027   	          15.42     	           1         	                1        	                1         	DNS
+US       	Google        	               18.4643   	           7.88104  	           0.372733  	                0.633333 	                0.666667  	Mixed Approach
+US       	Cloudflare    	               21.9928   	          29.2128   	           0.0805198 	                0.0587719	                0.063317  	Anycast
+US       	Yahoo         	                1.08188  	           0.242524 	           0.615385  	                0.538462 	                1         	DNS
+US       	CDN77         	                0.894443 	           2.08828  	           1         	                1        	                1         	DNS
+
+BR       	EdgeCast      	                0.972746 	           1.41357  	           0.236264  	                1        	                1         	Regional Anycast
+BR       	Cloudfront    	                5.9504   	           8.66189  	           1         	                1        	                1         	DNS
+BR       	Fastly        	                4.3905   	           4.06252  	           0.35      	                0.360656 	                0.377049  	Anycast
+BR       	Akamai        	               12.8473   	          13.8423   	           1         	                1        	                1         	DNS
+BR       	Google        	               27.1821   	          23.8667   	           0.680851  	                0.508929 	                0.772152  	DNS
+BR       	Cloudflare    	               34.2542   	          31.0626   	           0.00849858	                0.0395989	                0.00733596	Anycast
+BR       	CDN77         	                1.59057  	           1.43014  	           0.1875    	                1        	                1         	Regional Anycast
+BR       	Azion         	                4.42555  	           4.72865  	           1         	                1        	                1         	DNS
+
+AR       	EdgeCast      	                0.346199 	           0.854593 	           0         	                0.75     	                1         	Regional Anycast
+AR       	Cloudfront    	                9.18287  	          12.2107   	           1         	                1        	                1         	DNS
+AR       	Fastly        	                8.55431  	           6.49358  	           0.545455  	                0.8      	                0.521895  	Mixed Approach
+AR       	Akamai        	                9.22461  	          10.9359   	           0.970588  	                1        	                1         	DNS
+AR       	Google        	               30.4459   	          23.0562   	           0.621019  	                0.413883 	                0.718954  	DNS
+AR       	Cloudflare    	               32.2309   	          30.7356   	           0.00932432	                0.112593 	                0.0163603 	Anycast
+AR       	Yahoo         	                0.402671 	           0.17439  	           0.464286  	                1        	                1         	DNS
+AR       	CDN77         	                1.52229  	           2.40669  	           0.257835  	                0.961538 	                1         	Regional Anycast
+AR       	Facebook      	                2.25889  	           3.38144  	           1         	                1        	                1         	DNS
+AR       	BunnyCDN      	                0.333923 	           0.812666 	           0.5       	                1        	                1         	DNS
+AR       	StackPath     	                2.13858  	           1.446    	           0.4       	                0.333333 	                0.571429  	Mixed Approach
+
+GB       	EdgeCast      	                4.14514  	           2.65987  	           0.5       	                0.3      	                1         	Regional Anycast
+GB       	Cloudfront    	                9.96546  	          10.3129   	           1         	                1        	                1         	DNS
+GB       	Fastly        	               11.1607   	          13.3429   	           0.0375817 	                0.435772 	                0.523899  	Mixed Approach
+GB       	Akamai        	               18.7326   	          11.9455   	           1         	                1        	                1         	DNS
+GB       	Google        	               18.2007   	          17.8243   	           0.430779  	                0.62547  	                0.504275  	Mixed Approach
+GB       	Cloudflare    	               32.0026   	          28.6857   	           0.0498741 	                0.0284042	                0.0103816 	Anycast
+GB       	CDN77         	                0.770336 	           1.06312  	           0.5       	                1        	                1         	DNS
+
+FR       	EdgeCast      	                4.02047  	           3.48856  	           0.126263  	                0.214286 	                1         	Regional Anycast
+FR       	Cloudfront    	                8.32396  	          10.8708   	           1         	                1        	                1         	DNS
+FR       	Fastly        	                6.83261  	           9.16295  	           0.113379  	                0.0729746	                0.473684  	Mixed Approach
+FR       	Akamai        	               19.3512   	          12.0352   	           1         	                1        	                1         	DNS
+FR       	Google        	               15.8787   	          19.5088   	           0.231481  	                0.232323 	                0.302521  	Anycast
+FR       	Cloudflare    	               37.1712   	          35.9696   	           0.0200898 	                0.0163728	                0.0147728 	Anycast
+FR       	Yahoo         	                0.232229 	           0.206218 	           0.25      	                0.75     	                1         	Regional Anycast
+FR       	CDN77         	                1.1176   	           1.37526  	           1         	                1        	                1         	DNS
+FR       	StackPath     	                0.388258 	           0.470819 	           0.25      	                0.4      	                0.25      	Anycast
+FR       	Level3        	                2.33318  	           0.973411 	           1         	                1        	                1         	DNS
+
+ES       	EdgeCast      	                1.49188  	           2.88962  	           0.166667  	                0.333333 	                1         	Regional Anycast
+ES       	Cloudfront    	                9.03967  	          13.5618   	           1         	                1        	                1         	DNS
+ES       	Fastly        	               11.5151   	           5.68675  	           0.249301  	                0.594109 	                0.603448  	Mixed Approach
+ES       	Akamai        	               20.6266   	          14.55     	           1         	                1        	                1         	DNS
+ES       	Google        	               15.4934   	          18.1812   	           0.834951  	                0.825183 	                0.804124  	DNS
+ES       	Cloudflare    	               28.6219   	          24.0159   	           0.00787402	                0.0328714	                0.0160819 	Anycast
+ES       	CDN77         	                5.5973   	           6.98732  	           1         	                1        	                1         	DNS
+ES       	StackPath     	                1.67974  	           1.84632  	           0.571429  	                0.321429 	                0.371429  	Anycast
+
+TR       	EdgeCast      	                0.477281 	           3.0404   	           1         	                1        	                1         	DNS
+TR       	Cloudfront    	                2.88056  	           3.47448  	           1         	                1        	                1         	DNS
+TR       	Fastly        	                3.28794  	           2.87473  	           0.204301  	                0.169213 	                0.298246  	Anycast
+TR       	Akamai        	                8.58865  	           4.43037  	           1         	                1        	                1         	DNS
+TR       	Google        	               30.3652   	          20.2443   	           0.502315  	                0.851429 	                0.620963  	Mixed Approach
+TR       	Cloudflare    	               40.2411   	          44.1349   	           0.0869487 	                0.100671 	                0.0386628 	Anycast
+TR       	CDN77         	                2.05375  	           4.71639  	           0.493506  	                0.7      	                0.75      	DNS
+TR       	Medianova     	                6.10823  	           8.3278   	           0.75      	                0.666667 	                1         	DNS
+
+RU       	EdgeCast      	                0.427215 	           0.491096 	           0.5       	                0.233333 	                1         	Regional Anycast
+RU       	Cloudfront    	                1.54008  	           1.12869  	           1         	                1        	                1         	DNS
+RU       	Fastly        	                4.02426  	           3.3887   	           0.2375    	                0.0689655	                0.308333  	Anycast
+RU       	Akamai        	                5.93882  	           4.55679  	           0.902174  	                1        	                1         	DNS
+RU       	Google        	               25.211    	          20.2515   	           0.647059  	                0.780822 	                0.857143  	DNS
+RU       	Cloudflare    	               45.596    	          41.4079   	           0.125658  	                0.122209 	                0.139289  	Anycast
+RU       	CDN77         	                0.574895 	           0.853235 	           1         	                1        	                1         	DNS
+RU       	NGENIX        	                8.80802  	          14.3523   	           0.445946  	                0.306667 	                0.393939  	Anycast
+
+DE       	EdgeCast      	                0.905328 	           1.47755  	           0.25      	                0.692308 	                1         	Regional Anycast
+DE       	Cloudfront    	                8.21204  	          11.824    	           0.928962  	                1        	                0.928962  	DNS
+DE       	Fastly        	                7.87288  	           6.69878  	           0.0251321 	                0.118832 	                0.6       	Mixed Approach
+DE       	Akamai        	               22.1098   	          13.0839   	           1         	                1        	                1         	DNS
+DE       	Google        	               18.403    	          17.5567   	           0.468085  	                0.366119 	                0.56      	Mixed Approach
+DE       	Cloudflare    	               36.9235   	          38.8781   	           0.0181799 	                0.0181799	                0.00981584	Anycast
+DE       	Yahoo         	                0.0934704	           0.0122928	           0.25      	                0.375    	                0.714286  	Regional Anycast
+DE       	CDN77         	                2.21925  	           2.6772   	           1         	                1        	                1         	DNS
+
+CN       	EdgeCast      	                0.449605 	           0.847612 	           0         	                0.166667 	                0.5       	Mixed Approach
+CN       	Cloudfront    	                3.34486  	           1.73672  	           1         	                1        	                1         	DNS
+CN       	Fastly        	                4.58992  	          10.7935   	           0.178571  	                0.695652 	                0.636364  	Mixed Approach
+CN       	Akamai        	               14.832    	           6.74619  	           0.768514  	                1        	                1         	DNS
+CN       	Google        	               13.4931   	           9.07349  	           0.755556  	                0.722222 	                0.688889  	Mixed Approach
+CN       	Cloudflare    	               36.8725   	          27.9814   	           0.224252  	                0.185799 	                0.190476  	Anycast
+CN       	CDN77         	                1.45257  	           1.64403  	           1         	                1        	                1         	DNS
+CN       	Tencent       	               10.3409   	           7.7027   	           0.949383  	                1        	                1         	DNS
+CN       	Taobao        	                4.95553  	          28.1358   	           1         	                1        	                1         	DNS
+
+IN       	EdgeCast      	                0.674552 	           0.550753 	           1         	                0.25     	                1         	Regional Anycast
+IN       	Cloudfront    	                9.59157  	          10.9968   	           1         	                1        	                1         	DNS
+IN       	Fastly        	                4.05655  	           4.53157  	           0.539712  	                0.523997 	                0.547038  	Mixed Approach
+IN       	Akamai        	               17.0578   	           8.07196  	           1         	                1        	                1         	DNS
+IN       	Google        	               21.4933   	          24.2556   	           0.527017  	                0.8375   	                0.707621  	DNS
+IN       	Cloudflare    	               39.6877   	          36.1371   	           0.0151408 	                0.0318658	                0.00996981	Anycast
+IN       	CDN77         	                2.31473  	           2.34719  	           0.347826  	                0.9375   	                1         	Regional Anycast
+
+ID       	EdgeCast      	                0.770335 	           2.43763  	           0.333333  	                1        	                1         	Regional Anycast
+ID       	Cloudfront    	                5.91957  	           3.49348  	           1         	                1        	                1         	DNS
+ID       	Fastly        	                1.2507   	           1.56899  	           0.57967   	                0.727273 	                0.724138  	DNS
+ID       	Akamai        	                7.34015  	           5.74878  	           0.96      	                1        	                1         	DNS
+ID       	Google        	               33.552    	          25.5463   	           0.425345  	                0.525641 	                0.427273  	Mixed Approach
+ID       	Cloudflare    	               43.1973   	          38.778    	           0.0153412 	                0.122372 	                0.011908  	Anycast
+ID       	Yahoo         	                0.0322193	           0.0132364	           0.5       	                0.5      	                1         	DNS
+ID       	CDN77         	                0.430567 	           1.10423  	           1         	                1        	                1         	DNS
+ID       	Facebook      	                1.44108  	           1.54655  	           1         	                1        	                1         	DNS
+ID       	Taobao        	                0.0732257	           0.102931 	           1         	                1        	                1         	DNS
+
+AE       	EdgeCast      	                0.779606 	           0.948152 	           1         	                1        	                1         	DNS
+AE       	Cloudfront    	                4.83069  	           7.34423  	           0.949541  	                1        	                1         	DNS
+AE       	Fastly        	                9.24526  	          22.7696   	           0.685714  	                0.435165 	                0.5       	Mixed Approach
+AE       	Akamai        	               13.1672   	           8.85947  	           0.830752  	                1        	                1         	DNS
+AE       	Google        	               24.0052   	          12.225    	           0.416667  	                0.848558 	                0.640777  	Mixed Approach
+AE       	Cloudflare    	               41.013    	          36.2343   	           0.237889  	                0.032872 	                0.00519031	Anycast
+AE       	CDN77         	                0.913526 	           1.30828  	           1         	                1        	                1         	DNS
+AE       	StackPath     	                1.68357  	           0.872705 	           0.5625    	                0.25     	                0.25      	Anycast
+
+DZ       	EdgeCast      	                0.609607 	           1.64761  	           0.144444  	                0.1      	                1         	Regional Anycast
+DZ       	Cloudfront    	                3.84144  	           4.39536  	           0.4375    	                1        	                1         	DNS
+DZ       	Fastly        	                3.90271  	           4.06936  	           0.345013  	                0.0778325	                0.652381  	Mixed Approach
+DZ       	Akamai        	                9.2023   	          10.6627   	           0.404611  	                0.44898  	                1         	DNS
+DZ       	Google        	               20.0588   	          20.5403   	           0.261438  	                0.227195 	                0.598856  	Mixed Approach
+DZ       	Cloudflare    	               52.6498   	          46.0362   	           0.0585382 	                0.0540646	                0.0507715 	Anycast
+DZ       	Yahoo         	                0.137851 	           0.0764972	           0.833333  	                0.666667 	                0.5       	Mixed Approach
+DZ       	CDN77         	                2.83054  	           2.40691  	           0.846154  	                0.534188 	                1         	DNS
+DZ       	Facebook      	                1.67872  	           1.66614  	           0.75      	                1        	                1         	DNS
+
+ZA       	EdgeCast      	                0.292326 	           0.626708 	           0.3       	                0.2      	                1         	Regional Anycast
+ZA       	Cloudfront    	                4.20219  	           6.07018  	           0.762393  	                1        	                1         	DNS
+ZA       	Fastly        	                5.49939  	           4.24384  	           0.456522  	                0.140625 	                0.466667  	Mixed Approach
+ZA       	Akamai        	                7.25335  	           3.99535  	           0.693557  	                1        	                1         	DNS
+ZA       	Google        	               21.6931   	          26.1495   	           0.246032  	                0.506667 	                0.551724  	Mixed Approach
+ZA       	Cloudflare    	               53.2217   	          50.0105   	           0.121383  	                0.0498645	                0.0220964 	Anycast
+
+EG       	EdgeCast      	                0.484815 	           0.188574 	           0.166667  	                0.166667 	                0.333333  	Anycast
+EG       	Cloudfront    	                2.88103  	           4.20653  	           0.625     	                0.553846 	                0.738776  	DNS
+EG       	Fastly        	                3.04542  	           3.83094  	           0.283019  	                0.343343 	                0.333333  	Anycast
+EG       	Akamai        	                7.29451  	           5.34896  	           0.44      	                0.42     	                0.43      	Mixed Approach
+EG       	Google        	               21.3235   	          22.5457   	           0.274436  	                0.263312 	                0.199179  	Anycast
+EG       	Cloudflare    	               55.7788   	          51.9281   	           0.0232232 	                0.0426046	                0.0230248 	Anycast
+EG       	CDN77         	                2.41571  	           2.16888  	           0.318182  	                0.416667 	                0.333333  	Anycast
+EG       	Facebook      	                1.89189  	           2.26087  	           1         	                1        	                0.833333  	DNS
+EG       	StackPath     	                1.00585  	           1.43008  	           0.2       	                0.2      	                0.333333  	Anycast
+EG       	Level3        	                2.07021  	           1.42109  	           0.454545  	                0.5      	                0.692308  	Mixed Approach
+EG       	Taobao        	                0.275843 	           0.183034 	           0.692308  	                0.692308 	                0.583333  	Mixed Approach
+EG       	MicrosoftAzure	                0.44302  	           0.683543 	           0.666667  	                0.333333 	                0.380952  	Anycast
+
+NG       	EdgeCast      	                2.32947  	           2.17669  	           0.363636  	                0.0909091	                0.818182  	Regional Anycast
+NG       	Cloudfront    	                5.70211  	           5.29391  	           0.825563  	                0.386155 	                0.468208  	Mixed Approach
+NG       	Fastly        	                6.59625  	           4.90631  	           0.198198  	                0.140351 	                0.505747  	Mixed Approach
+NG       	Akamai        	                9.89568  	          24.5893   	           0.38913   	                1        	                1         	Regional Anycast
+NG       	Google        	               25.266    	          17.5255   	           0.329114  	                0.253846 	                0.473684  	Mixed Approach
+NG       	Cloudflare    	               40.7409   	          34.8967   	           0.00951935	                0.0485965	                0.0498575 	Anycast
+NG       	CDN77         	                1.03009  	           2.37996  	           0.909091  	                0.454545 	                1         	DNS
+NG       	Facebook      	                2.00267  	           1.41807  	           1         	                0.8      	                1         	DNS
+NG       	StackPath     	                1.05362  	           0.353262 	           0.285714  	                0.142857 	                0         	Anycast
+NG       	Taobao        	                0.71113  	           0.597369 	           0.846154  	                0.769231 	                1         	DNS
+NG       	MicrosoftAzure	                1.91639  	           2.14843  	           0.666667  	                0.666667 	                0.666667  	Mixed Approach
+
+AU       	EdgeCast      	                0.733269 	           0.858066 	           0.181818  	               -1        	                1         	Regional Anycast
+AU       	Cloudfront    	                9.54747  	          12.0939   	           1         	               -1        	                1         	DNS
+AU       	Fastly        	                7.68586  	           8.63498  	           0.502559  	               -1        	                0.479291  	Mixed Approach
+AU       	Akamai        	               19.8402   	          17.6506   	           1         	               -1        	                1         	DNS
+AU       	Google        	               26.1972   	          20.0267   	           0.0836534 	               -1        	                0.456522  	Mixed Approach
+AU       	Cloudflare    	               26.5025   	          24.2312   	           0.0123362 	               -1        	                0.0159931 	Anycast

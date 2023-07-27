@@ -1,0 +1,381 @@
+{
+    "date": "04/07/2023, 23:33:30",
+    "cdn_count": "75",
+    "domains": {
+        "onesignal.com": {
+            "IP": "'104.18.214.59'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "cdn.revolutionise.com.au": {
+            "IP": "'13.224.174.84'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "static.my.commbank.com.au": {
+            "IP": "'104.119.101.16'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "img.ltwebstatic.com": {
+            "IP": "'104.18.9.190'",
+            "cdns": "'.cloudflare.net', '.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare', 'Cloudflare'"
+        },
+        "secure.espncdn.com": {
+            "IP": "'23.192.239.153'",
+            "cdns": "'.edgesuite.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "graphql.rmdprod.racing.com": {
+            "IP": "'13.35.137.10'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "id.rlcdn.com": {
+            "IP": "'35.190.60.146'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "hips.hearstapps.com": {
+            "IP": "'151.101.20.155'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "c.amazon-adsystem.com": {
+            "IP": "'13.224.180.84'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "api.accor.com": {
+            "IP": "'35.247.155.121'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "metrics.pizzahut.com.au": {
+            "IP": "'216.239.36.21', '172.217.24.51'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "citychic.com.au": {
+            "IP": "'104.18.20.145', '104.18.21.145'",
+            "cdns": "'.cloudflare.net', '.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare', 'Cloudflare'"
+        },
+        "recommendations.abc.net.au": {
+            "IP": "'23.202.160.194'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "paramountplus.com": {
+            "IP": "'54.68.182.72', '146.75.41.91'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "assets.mlcdn.com": {
+            "IP": "'104.22.7.203'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "survey.g.doubleclick.net": {
+            "IP": "'172.217.24.49'",
+            "cdns": "'.google.', 'googlehosted.com'",
+            "cdns_by_names": "'Google', 'Google'"
+        },
+        "10645201.fls.doubleclick.net": {
+            "IP": "'172.217.24.38'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "vimeo.com": {
+            "IP": "'162.159.128.61', '162.159.138.60'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "collector-px1dk3430l.px-client.net": {
+            "IP": "'35.190.10.96'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "9910951.fls.doubleclick.net": {
+            "IP": "'172.217.24.38'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "id-au.piano.io": {
+            "IP": "'104.16.240.21'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "to.getnitropack.com": {
+            "IP": "'103.180.114.1'",
+            "cdns": "'.b-cdn.net'",
+            "cdns_by_names": "'BunnyCDN'"
+        },
+        "cdn.productreview.com.au": {
+            "IP": "'104.18.28.116'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "data.stats.tools": {
+            "IP": "'13.35.137.75', '13.35.137.97'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "rubiconcm.digitaleast.mobi": {
+            "IP": "'34.95.81.168', '85.13.153.132'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "bes.gcp.data.bigcommerce.com": {
+            "IP": "'34.111.131.117'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "j1-ofp.static.pub": {
+            "IP": "'23.47.73.175'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "tracking.monsido.com": {
+            "IP": "'35.190.93.146'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "sourcepoint.theguardian.com": {
+            "IP": "'146.75.41.111'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "gcp.api.snapchat.com": {
+            "IP": "'35.190.43.134'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "img.alicdn.com": {
+            "IP": "'47.246.41.254', '47.246.42.253'",
+            "cdns": "'.taobaocdn.com'",
+            "cdns_by_names": "'Taobao'"
+        },
+        "cf.geekdo-static.com": {
+            "IP": "'13.35.137.62', '13.35.137.117'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "img.freepik.com": {
+            "IP": "'23.202.160.228'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "quillbot.com": {
+            "IP": "'104.18.8.150'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "m3clhqb1hra5f4qxn45kufgmpjxv91680916682.nuid.imrworldwide.com": {
+            "IP": "'13.35.137.92', '13.35.137.75', '13.35.137.102'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "pccasegear.com": {
+            "IP": "'45.60.102.222', '45.60.16.222'",
+            "cdns": "'x.incapdns.net'",
+            "cdns_by_names": "'Incapsula'"
+        },
+        "jbhifi.api.useinsider.com": {
+            "IP": "'162.159.134.61'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "nortontiles.tiles.ampfeed.com": {
+            "IP": "'104.97.249.6'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "portalapi.afterpay.com": {
+            "IP": "'104.17.92.79'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "cdn.hotdoc.com.au": {
+            "IP": "'146.75.41.176', '52.63.221.201', '3.104.96.248'",
+            "cdns": "'.amazonaws.com', '.nocookie.net'",
+            "cdns_by_names": "'Amazon AWS', 'Fastly'"
+        },
+        "cdn77-pic.xnxx-cdn.com": {
+            "IP": "'143.244.62.9'",
+            "cdns": "'.cdn77.org'",
+            "cdns_by_names": "'CDN77'"
+        },
+        "iview.abc.net.au": {
+            "IP": "'23.202.160.194'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "github.githubassets.com": {
+            "IP": "'185.199.109.154'",
+            "cdns": "'.nocookie.net'",
+            "cdns_by_names": "'Fastly'"
+        },
+        "11549412.fls.doubleclick.net": {
+            "IP": "'172.217.24.38'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "autotraderau-res.cloudinary.com": {
+            "IP": "'23.214.108.41'",
+            "cdns": "'.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai'"
+        },
+        "gdpr.reastatic.net": {
+            "IP": "'13.224.174.111', '13.224.174.54'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "imp9.bidgear.com": {
+            "IP": "'172.67.74.36'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "www2.commsec.com.au": {
+            "IP": "'23.37.138.75'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "6da7b56a-3097-4a8c-baaa-4a543536193b.edge.permutive.app": {
+            "IP": "'104.18.0.175'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "cloudinary.images-iherb.com": {
+            "IP": "'104.18.17.102'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "career10.successfactors.com": {
+            "IP": "'104.97.191.70'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "s1.mecca.com.au": {
+            "IP": "'13.224.174.68', '13.224.174.14'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "g4.silverdaddies.com": {
+            "IP": "'104.21.234.69'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "relay.fiverr.com": {
+            "IP": "'104.18.254.23'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "o348400.ingest.sentry.io": {
+            "IP": "'34.120.195.249'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "a3907401911.cdn.optimizely.com": {
+            "IP": "'23.37.135.171'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "images.samsung.com": {
+            "IP": "'23.202.160.150'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "carsguide-res.cloudinary.com": {
+            "IP": "'23.214.108.41'",
+            "cdns": "'.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai'"
+        },
+        "10747178.fls.doubleclick.net": {
+            "IP": "'172.217.24.38'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "experience.velocityfrequentflyer.com": {
+            "IP": "'104.97.245.130'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "prod-realtimeapi-usc1.rdpnt.com": {
+            "IP": "'34.149.147.33'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "tools.google.com": {
+            "IP": "'172.217.24.46'",
+            "cdns": "'.google.', 'googlehosted.com'",
+            "cdns_by_names": "'Google', 'Google'"
+        },
+        "tracker.15cab294-b9ec-4417-af84-d2cb85c242a6.prod.systema.cloud": {
+            "IP": "'13.238.227.245', '54.79.207.180'",
+            "cdns": "'.amazonaws.com'",
+            "cdns_by_names": "'Amazon AWS'"
+        },
+        "scholar.google.com": {
+            "IP": "'172.217.24.36'",
+            "cdns": "'.google.', 'googlehosted.com'",
+            "cdns_by_names": "'Google', 'Google'"
+        },
+        "scone-pa.clients6.google.com": {
+            "IP": "'172.217.24.42'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "sdk.iad-05.braze.com": {
+            "IP": "'151.101.22.133', '146.75.42.133'",
+            "cdns": "'.nocookie.net'",
+            "cdns_by_names": "'Fastly'"
+        },
+        "11236455.fls.doubleclick.net": {
+            "IP": "'172.217.24.38'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "energyaustralia.com.au": {
+            "IP": "'13.55.208.19', '104.97.231.141'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "adservice.google.com.au": {
+            "IP": "'172.217.24.34'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "pubads.g.doubleclick.net": {
+            "IP": "'172.217.24.34'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "athena.almanac.jaywing.com.au": {
+            "IP": "'54.153.176.140'",
+            "cdns": "'.amazonaws.com'",
+            "cdns_by_names": "'Amazon AWS'"
+        },
+        "classic.austlii.edu.au": {
+            "IP": "'138.25.65.22'",
+            "cdns": "'.akadns.net'",
+            "cdns_by_names": "'Akamai'"
+        },
+        "collector-px8suhxpnm.px-client.net": {
+            "IP": "'35.190.10.96'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "tv-api.9now.com.au": {
+            "IP": "'23.202.161.56'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "report.chemist-wh.gbqofs.io": {
+            "IP": "'13.251.198.116', '52.220.91.57'",
+            "cdns": "'.amazonaws.com'",
+            "cdns_by_names": "'Amazon AWS'"
+        }
+    }
+}

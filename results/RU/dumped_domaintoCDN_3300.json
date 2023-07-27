@@ -1,0 +1,31 @@
+{
+    "date": "04/08/2023, 06:06:45",
+    "cdn_count": "5",
+    "domains": {
+        "rotator.adsmediator.com": {
+            "IP": "'188.114.97.13', '188.114.97.13'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "pepper.ru": {
+            "IP": "'104.18.2.133', '188.114.99.238', '104.18.2.133'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "csync.loopme.me": {
+            "IP": "'35.214.153.92', '35.214.153.92'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "a.ad.gt": {
+            "IP": "'104.22.4.69', '52.43.234.245', '172.67.23.234', '52.35.164.72'",
+            "cdns": "'.cloudflare.net', '.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare', 'Cloudflare'"
+        },
+        "pwebstat.com": {
+            "IP": "'104.21.25.133', '172.67.134.67'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        }
+    }
+}

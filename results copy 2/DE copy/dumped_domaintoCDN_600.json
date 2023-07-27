@@ -1,0 +1,241 @@
+{
+    "date": "04/08/2023, 12:38:02",
+    "cdn_count": "47",
+    "domains": {
+        "onepiece-tube.com": {
+            "IP": "'188.114.96.3', '188.114.97.3'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "docmorris.de": {
+            "IP": "'104.18.2.176', '104.18.3.176'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "assets.ullapopken.de": {
+            "IP": "'2.21.20.152'",
+            "cdns": "'.edgesuite.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "encore.scdn.co": {
+            "IP": "'146.75.122.248', '146.75.118.248'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "cdns.zbporn.com": {
+            "IP": "'188.114.97.3'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "data.hunkemoller.de": {
+            "IP": "'216.239.34.21'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "sdk.apester.com": {
+            "IP": "'146.75.122.217', '146.75.118.217'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "a.ad.gt": {
+            "IP": "'172.67.23.234', '52.43.234.245'",
+            "cdns": "'.cloudflare.net', '.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare', 'Cloudflare'"
+        },
+        "api.lotto24.de": {
+            "IP": "'104.19.144.120'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "xhamster.com": {
+            "IP": "'104.18.155.3', '88.208.60.136'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "expert.de": {
+            "IP": "'34.149.239.29', '104.18.38.27'",
+            "cdns": "'.cloudflare.net', '.cloudflare.com', 'googlehosted.com'",
+            "cdns_by_names": "'Cloudflare', 'Cloudflare', 'Google'"
+        },
+        "static.frauporno.com": {
+            "IP": "'188.114.97.3'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "imgcy.trivago.com": {
+            "IP": "'23.41.180.22'",
+            "cdns": "'.akamaiedge.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "i0.gmx.net": {
+            "IP": "'23.35.236.165'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "csi.gstatic.com": {
+            "IP": "'142.250.70.195'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "accounts.nintendo.com": {
+            "IP": "'23.45.218.145'",
+            "cdns": "'.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai'"
+        },
+        "app.usercentrics.eu": {
+            "IP": "'35.190.14.188'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "assets.static-bahn.de": {
+            "IP": "'23.36.162.217'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "static-ap3.cdnanp.com": {
+            "IP": "'104.26.7.79'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "image.gala.de": {
+            "IP": "'23.36.162.220', '23.36.162.219'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "arbeitgeberportal.kununu.com": {
+            "IP": "'141.193.213.10'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "assetsio.reedpopcdn.com": {
+            "IP": "'146.75.121.55', '146.75.117.55'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "d.liveticker.com": {
+            "IP": "'34.120.185.22'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "breuninger-privacy.my.onetrust.eu": {
+            "IP": "'141.101.90.3'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "boot.pbstck.com": {
+            "IP": "'104.22.1.93'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "qsc.cf2.quoracdn.net": {
+            "IP": "'162.159.152.17'",
+            "cdns": "'.cloudflare.net', '.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare', 'Cloudflare'"
+        },
+        "cdn.rawgit.com": {
+            "IP": "'185.59.220.194', '169.150.247.36'",
+            "cdns": "'.b-cdn.net', '.cdn77.org'",
+            "cdns_by_names": "'BunnyCDN', 'CDN77'"
+        },
+        "www3.doubleclick.net": {
+            "IP": "'172.217.16.206'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "reddit.com": {
+            "IP": "'151.101.65.140', '146.75.121.140'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "ads.projectagoraservices.com": {
+            "IP": "'23.48.23.7'",
+            "cdns": "'.akamaized.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "media.cdn.kaufland.de": {
+            "IP": "'34.117.228.247'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "assets.aboutstatic.com": {
+            "IP": "'104.18.31.44'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "vwj3o45y6f.kameleoon.eu": {
+            "IP": "'104.26.11.30'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "mdr.de": {
+            "IP": "'193.22.36.128', '104.68.70.157'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "im.contentlounge.net": {
+            "IP": "'23.36.162.22', '23.36.162.29'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "arbada.com": {
+            "IP": "'104.21.233.171'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "level3-static.ebaycdn.net": {
+            "IP": "'8.241.154.250', '8.241.165.122'",
+            "cdns": "'.footprint.net', '.fpbns.net'",
+            "cdns_by_names": "'Level3', 'Level3'"
+        },
+        "br.de": {
+            "IP": "'194.187.162.188', '104.68.69.163'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "media.inhumanity.com": {
+            "IP": "'188.114.96.3'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "o278969.ingest.sentry.io": {
+            "IP": "'34.120.195.249'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "rm-script.dotmetrics.net": {
+            "IP": "'99.86.4.21', '99.86.4.19'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        },
+        "striveme.com": {
+            "IP": "'104.26.0.27'",
+            "cdns": "'.cloudflare.com'",
+            "cdns_by_names": "'Cloudflare'"
+        },
+        "old.reddit.com": {
+            "IP": "'146.75.121.140', '146.75.117.140'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "w3-reporting.reddit.com": {
+            "IP": "'146.75.117.140', '146.75.121.140'",
+            "cdns": "'.fastly.net', '.nocookie.net'",
+            "cdns_by_names": "'Fastly', 'Fastly'"
+        },
+        "google.com": {
+            "IP": "'142.250.186.110', '142.250.186.36'",
+            "cdns": "'googlehosted.com'",
+            "cdns_by_names": "'Google'"
+        },
+        "is.alicdn.com": {
+            "IP": "'104.108.179.86'",
+            "cdns": "'.edgekey.net', '.akamaitechnologies.fr'",
+            "cdns_by_names": "'Akamai', 'Akamai'"
+        },
+        "cdn-thumbs.4tube.com": {
+            "IP": "'143.204.89.68'",
+            "cdns": "'.cloudfront.net'",
+            "cdns_by_names": "'Cloudfront'"
+        }
+    }
+}
