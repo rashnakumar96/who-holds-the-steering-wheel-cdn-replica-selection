@@ -23,11 +23,13 @@ import certifi
 import ssl
 import sys
 import ipaddress
-import pandas as pd
 import seaborn as sns
+from matplotlib.ticker import FormatStrFormatter
+from matplotlib.ticker import FuncFormatter
 
 def collectResults(cdns,vantagePoints,country,latencyResult,cdnMap):
 	results={}
+	cloudPrefixes,nativePrefixes,cloudfrontPrefixes=createPrefixlist()
 	for cdn in cdns:
 		# customerResults=customerSpecificVariation(cdn,cdnMap,vantagePoints,country,latencyResult)
 		# badCustomersAcrossScopes,outlierBounds=boxplotdata(customerResults,cdn,country) #uncomment this to remove customers that are outliers
@@ -48,6 +50,7 @@ def collectResults(cdns,vantagePoints,country,latencyResult,cdnMap):
 
 			for domain in domains:
 				tld=findtld(domain)
+
 				# if cdn=="Google":
 				# 	if tld in badCustomersAcrossScopes: #uncomment this to remove customers that are outliers
 				# 		# print ("here")
@@ -57,11 +60,24 @@ def collectResults(cdns,vantagePoints,country,latencyResult,cdnMap):
 			ips=list(set(ips))
 			# zlatencies=[]
 			for replicaip in ips:
-				# if vantage!="local" and replicaip in poorplatform[vantage]:
-				# 	continue
-				if replicaip in latencyResult and len(latencyResult[replicaip])>0:
-					latency=statistics.mean(latencyResult[replicaip])
-					results[cdn][vantage].append(latency)
+				if cdn=="Google":
+					# prefix=longest_matching_prefix(replicaip, nativePrefixes)
+					prefix=longest_matching_prefix(replicaip, cloudPrefixes)
+
+					if prefix!=None:
+						if replicaip in latencyResult and len(latencyResult[replicaip])>0:
+							latency=statistics.mean(latencyResult[replicaip])
+							results[cdn][vantage].append(latency)
+				if cdn=="Cloudfront":
+					prefix=longest_matching_prefix(replicaip, cloudfrontPrefixes)
+					if prefix!=None:
+						if replicaip in latencyResult and len(latencyResult[replicaip])>0:
+							latency=statistics.mean(latencyResult[replicaip])
+							results[cdn][vantage].append(latency)        		
+				else:
+					if replicaip in latencyResult and len(latencyResult[replicaip])>0:
+						latency=statistics.mean(latencyResult[replicaip])
+						results[cdn][vantage].append(latency)
 
 					# zlatencies=latencyResult[replicaip]
 					# if latency<=lower_bound or latency>=upper_bound:
@@ -425,17 +441,31 @@ def plotrttCDFsMixedApproach(country,results,resolver_dict,vantagePoints,cdn):
 		resolverVantages=["local","diff_metro","same_region","neighboring_region","non-neighboring_region"]
 		ind=0
 		countries_subst=["US","BR","AR"]
+		plt.figure(figsize=(11, 6))
+
+		label_mapping = {
+			'local': 'Local',
+			'diff_metro': 'Different Metro',
+			'same_region': 'Same Region',
+			'neighboring_subregion': 'Neighboring Region',
+			'neighboring_region': 'Neighboring Region',
+			'non-neighboring_region': 'Non-Neighboring Region'
+		}
 
 		for resolverVantage in resolverVantages:
 			if country in countries_subst and resolverVantage=="neighboring_region":
 				resolverVantage="neighboring_subregion"
 				location=resolver_dict[country][resolverVantage].split("(")[1]
 				region="neigh_region("
-				# print (region,location)
 				resolver_dict[country][resolverVantage]=region+location
 			rtts=customer[resolverVantage]
 			x, y = ecdf(rtts)
 			rtts=np.sort(rtts)
+
+			if resolverVantage in resolver_dict[country]:
+				original_label = resolver_dict[country][resolverVantage]
+				# location = original_label.split('(')[1].rstrip(')')
+				formatted_label = f"{label_mapping[resolverVantage]}"
 			try:
 				p10 = np.percentile(rtts, 20)
 				p70 = np.percentile(rtts, 70)
@@ -446,20 +476,88 @@ def plotrttCDFsMixedApproach(country,results,resolver_dict,vantagePoints,cdn):
 				idx = np.where((rtts >= p10) & (rtts <= p70))
 				
 				rtts=np.array(rtts)
-				plt.scatter(rtts[idx], yvals[idx],color=colors[resolverVantage],label=resolver_dict[country][resolverVantage],linestyle="solid")
+				plt.scatter(rtts[idx], yvals[idx],color=colors[resolverVantage],label=formatted_label,linestyle="solid",linewidth=2)
 			except:
-				plt.scatter(x,y,color=colors[resolverVantage],label=resolver_dict[country][resolverVantage],linestyle="solid")
-			# plt.scatter(x,y,color=colors[resolverVantage],label=resolver_dict[country][resolverVantage],linestyle="solid")
+				plt.scatter(x,y,color=colors[resolverVantage],label=formatted_label,linestyle="solid",linewidth=2)
 			ind+=1
 		if cdn=="EdgeCast":
 			cdn="Edgio"
-		plt.xscale('log')
-		plt.legend()
+		# plt.xscale('log')
+		
 
-		plt.xlabel('RTT [ms]')
-		plt.ylabel(cdn+"_"+country)
+		legend=plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.32), ncol=2, frameon=True)
+		handles, _ = plt.gca().get_legend_handles_labels()  # get from current Axes
+		legend = plt.legend(
+			handles,
+			["Local", "Diff Metro", "Same Reg", "Neigh Reg", "Non-Neigh"],
+			loc='center right',          # anchor the right side of legend box
+			bbox_to_anchor=(-0.08, 0.2), # move outside: x negative = further left, y=0.5 = vertical center
+			ncol=1,
+			frameon=True
+		)
+
+		legend.get_frame().set_linewidth(1.5)
+		legend.get_frame().set_edgecolor('black')
+		legend.get_frame().set_facecolor('white')
+
+		for text in legend.get_texts():
+			text.set_fontweight('bold')
+			text.set_fontsize(20)
+
+		
+
+		# Make x and y ticks bold using a direct loop
+		# ax = plt.gca()  # Get the current axis
+		# ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{x:.2f}'))
+		# for label in ax.get_xticklabels() + ax.get_yticklabels():
+		# 	label.set_fontweight('bold')
+
+		# Set bold labels for x and y axes
+		# plt.xlabel('RTT [ms]', fontweight='bold')
+		# plt.ylabel('CDF', fontweight='bold')
+
+
+		y_min = 0.2
+		y_max = 0.7
+		padding = 0.02  # Adjust padding as needed
+		plt.ylim(y_min - padding, y_max + padding)
+
+		plt.xlabel('RTT [ms]',fontsize=14, fontweight='bold')
+		plt.ylabel('CDF',fontsize=14, fontweight='bold')
+		# plt.gca().xaxis.set_major_formatter(FormatStrFormatter('%.1f'))
+		ax = plt.gca()  # Get the current axis
+		for label in ax.get_xticklabels():  # Adjust x-axis tick labels
+			label.set_fontweight('bold')
+			label.set_fontsize(14)  # Set the font size
+			label.set_color('0.2')  # Set the color to a dark gray
+
+		for label in ax.get_yticklabels():  # Adjust y-axis tick labels
+			label.set_fontweight('bold')
+			label.set_fontsize(14)  # Set the font size
+			label.set_color('0.2')  # Set the color to a dark gray
+
+		# Customize the borders of the figure
+		plt.gca().spines['top'].set_linewidth(1.5)
+		plt.gca().spines['right'].set_linewidth(1.5)
+		plt.gca().spines['left'].set_linewidth(1.5)
+		plt.gca().spines['bottom'].set_linewidth(1.5)
+
+		plt.gca().spines['top'].set_edgecolor('black')
+		plt.gca().spines['right'].set_edgecolor('black')
+		plt.gca().spines['left'].set_edgecolor('black')
+		plt.gca().spines['bottom'].set_edgecolor('black')
 		plt.grid()
-		plt.savefig("graphs/"+country+"/"+cdn+"_"+customerType)
+		plt.tight_layout(rect=[0, 0, 1, 0.95])
+		# plt.savefig("graphs/"+country+"/"+cdn+"_"+customerType)
+
+		# legend=plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.32), ncol=2, frameon=True,fontsize=14,title_fontsize='x-large')
+
+		
+		
+		if country=="GB":
+			plt.savefig("graphs/"+country+"/"+cdn+"_"+customerType+"_UK.pdf",dpi=300, format='pdf')
+		else:
+			plt.savefig("graphs/"+country+"/"+cdn+"_"+customerType+"_"+country+".pdf",dpi=300, format='pdf')
 		plt.clf()
 
 	def computeMixedKS(cdn,customer,country,customerType):
@@ -508,6 +606,19 @@ def plotrttCDFs(country,results,resolver_dict,vantagePoints):
 	resolverVantages=["local","diff_metro","same_region","neighboring_region","non-neighboring_region"]
 	pdfs={}
 	countDict={}
+	# plt.figure(figsize=(11, 6))
+	fig, ax = plt.subplots(figsize=(11,6))   # identical size for all
+
+
+	label_mapping = {
+		'local': 'Local',
+		'diff_metro': 'Different Metro',
+		'same_region': 'Same Region',
+		'neighboring_subregion': 'Neighboring Region',
+		'neighboring_region': 'Neighboring Region',
+		'non-neighboring_region': 'Non-Neighboring Region'
+	}
+
 	for cdn in results:
 		print ("country: ",country,cdn)
 		ind=0
@@ -527,6 +638,12 @@ def plotrttCDFs(country,results,resolver_dict,vantagePoints):
 
 			
 			countDict[cdn].append(len(rtts))
+			if resolverVantage in resolver_dict[country]:
+				original_label = resolver_dict[country][resolverVantage]
+				location = original_label.split('(')[1].rstrip(')')
+				# formatted_label = f"{label_mapping[resolverVantage]} - {location}"
+				formatted_label = f"{label_mapping[resolverVantage]}"
+
 
 			try:
 				p10 = np.percentile(rtts, 20)
@@ -538,21 +655,72 @@ def plotrttCDFs(country,results,resolver_dict,vantagePoints):
 				idx = np.where((rtts >= p10) & (rtts <= p70))
 				
 				rtts=np.array(rtts)
-				plt.scatter(rtts[idx], yvals[idx],color=colors[resolverVantage],label=resolver_dict[country][resolverVantage],linestyle="solid")
+				plt.scatter(rtts[idx], yvals[idx],color=colors[resolverVantage],label=formatted_label,linestyle="solid",linewidth=2)
 			except:
-				plt.scatter(x,y,color=colors[resolverVantage],label=resolver_dict[country][resolverVantage],linestyle="solid")
+				plt.scatter(x,y,color=colors[resolverVantage],label=formatted_label,linestyle="solid",linewidth=2)
 
 			ind+=1
 		if cdn=="EdgeCast":
 			cdn="Edgio"
-		if cdn!="Cloudflare":
-			plt.xscale('log')
+		# if cdn!="Cloudflare":
 		
-		plt.legend()
+
+		legend=plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.32), ncol=2, frameon=True)
+
+
+		handles, _ = plt.gca().get_legend_handles_labels()  # get from current Axes
+		legend = plt.legend(
+			handles,
+			["Local", "Diff Metro", "Same Reg", "Neigh Reg", "Non-Neigh"],
+			loc='center right',          # anchor the right side of legend box
+			bbox_to_anchor=(-0.08, 0.2), # move outside: x negative = further left, y=0.5 = vertical center
+			ncol=1,
+			frameon=True
+		)
+
+		legend.get_frame().set_linewidth(1.5)
+		legend.get_frame().set_edgecolor('black')
+		legend.get_frame().set_facecolor('white')
+
+		for text in legend.get_texts():
+			text.set_fontweight('bold')
+			text.set_fontsize(20)
+
+
+		
+		# plt.xscale('log')
+
+
+		y_min = 0.2
+		y_max = 0.7
+		padding = 0.02  # Adjust padding as needed
+		plt.ylim(y_min - padding, y_max + padding)
+
+		# Customize the borders of the figure
+		plt.gca().spines['top'].set_linewidth(1.5)
+		plt.gca().spines['right'].set_linewidth(1.5)
+		plt.gca().spines['left'].set_linewidth(1.5)
+		plt.gca().spines['bottom'].set_linewidth(1.5)
+
+		plt.gca().spines['top'].set_edgecolor('black')
+		plt.gca().spines['right'].set_edgecolor('black')
+		plt.gca().spines['left'].set_edgecolor('black')
+		plt.gca().spines['bottom'].set_edgecolor('black')
 		plt.grid()
-		plt.xlabel('RTT [ms]')
-		plt.ylabel(cdn+"_"+country)
-		plt.savefig("graphs/"+country+"/"+cdn)
+	
+			 
+		# Set bold labels for x and y axes
+		# legend=plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.32), ncol=2, frameon=True,fontsize=14,title_fontsize='x-large')
+
+		plt.xlabel('RTT [ms]',fontsize=14, fontweight='bold')
+		plt.ylabel('CDF',fontsize=14, fontweight='bold')
+		
+		plt.tight_layout(rect=[0, 0, 1, 0.95])
+		
+		if country=="GB":
+			plt.savefig("graphs/"+country+"/"+cdn+"_UK.pdf",dpi=300, format='pdf')
+		else:
+			plt.savefig("graphs/"+country+"/"+cdn+"_"+country+".pdf",dpi=300, format='pdf')
 		plt.clf()
 
 # def plotrttCDFs(country,results,resolver_dict,vantagePoints):
@@ -763,13 +931,13 @@ def groupedBoxPlot(plot_x,plot_sameRegion,plot_diffRegion,fname):
 	plt.figure(figsize=(15,8))
 	dd=pd.melt(df,id_vars=['CDNs'],value_vars=['Same Region (CRV[1])','Different Region (CRV[3])'],var_name='Region Type')
 	gfg=sns.boxplot(x='CDNs',y='value',data=dd,hue='Region Type')
-	plt.setp(gfg.get_legend().get_texts(), fontsize='20')
-	plt.setp(gfg.get_legend().get_title(), fontsize='20')
-	plt.tick_params(axis='both', which='major', labelsize=14) 
-	plt.ylabel('Coefficient of CDN Regionalization',fontsize="20")
-	plt.xlabel('CDNs',fontsize="20")
+	plt.setp(gfg.get_legend().get_texts(), fontsize='20',fontweight='bold')
+	plt.setp(gfg.get_legend().get_title(), fontsize='20',fontweight='bold')
+	plt.tick_params(axis='both', which='major', labelsize=14,labelweight='bold') 
+	plt.ylabel('Coefficient of CDN Regionalization',fontsize="20",fontweight='bold')
+	plt.xlabel('CDNs',fontsize="20",fontweight='bold')
 	plt.ylim(0, 1.02)
-	plt.savefig('graphs/KSThreshold'+fname+'.png')
+	plt.savefig('graphs/KSThreshold'+fname+'.pdf',dpi=300, format='pdf')
 
 def plotKSValues(countries,distance_dict):	
 	# cdns={"Akamai":"Akamai (DNS)","Cloudflare":"Cloudflare (Anycast)","EdgeCast":"Edgio (Regional Anycast)","Google":"Google (Mixed Approach)"}
@@ -883,16 +1051,42 @@ def plotKSValuesCDN(countries,distance_dict,cdns):
 		for attribute, measurement in ks_values.items():
 		    offset = width * multiplier
 		    rects = ax.bar(x + offset, measurement, width, label=attribute)
-		    ax.bar_label(rects, padding=3)
+		    ax.bar_label(rects, padding=3,fmt='%.1f', fontsize=14, fontweight='bold')
 		    multiplier += 1
 
 		# Add some text for labels, title and custom x-axis tick labels, etc.
-		ax.set_ylabel('Coefficient of Regionalization')
+		ax.set_ylabel('Coefficient of Regionalization', fontsize=14, fontweight='bold')
 		ax.set_xticks(x + width, countries)
-		ax.legend(loc='upper left', ncols=3)
+		ax.set_xticklabels(countries, fontsize=14, fontweight='bold')
+		# ax.legend(loc='upper left', ncols=3,fontsize=14, frameon=True)
 		ax.set_ylim(0, 1.15)
+
+		legend=ax.legend(
+			loc='upper center',  # Position the legend above the plot
+			bbox_to_anchor=(0.5, 1.2),  # Adjust placement to center it above the plot
+			ncol=1,  # Reduce the number of columns to make it stack vertically
+			fontsize=14,  # Set font size
+			frameon=True  # Keep the frame for the legend
+		)
+		for text in legend.get_texts():
+			text.set_fontweight('bold')
+
+		# Bold y-tick labels
+		for label in ax.get_yticklabels():
+			label.set_fontweight('bold')
+			label.set_fontsize(14)
+
+		# Bold x-tick labels (reapplied to ensure boldness)
+		for label in ax.get_xticklabels():
+			label.set_fontweight('bold')
+			label.set_fontsize(14)
+
+		# Customize spines
+		for spine in ax.spines.values():
+			spine.set_linewidth(1.5)
+
 		# ax.set_title(cdns[cdn])
-		plt.savefig('graphs/KSThreshold_'+cdn+'.png')
+		plt.savefig('graphs/KSThreshold_'+cdn+'.pdf',dpi=300, format='pdf')
 
 	# plt.show()
 
@@ -1341,9 +1535,11 @@ def computeCDFDistance(countries,cdnCountryMap,resolver_dict):
 					# ws_dist=wasserstein_distance(results[cdn][vantage_i],results[cdn][vantage_j])
 					# distance_dict[cdn][country][vantage_i+"+"+vantage_j]=ws_dist
 
-	plotKSValues(countries,distance_dict)
+	# plotKSValues(countries,distance_dict)
 
-	KSThreshold(countries,distance_dict)
+	# KSThreshold(countries,distance_dict,cdnCountryMap)
+	# exit()
+	return()
 
 	table=[]
 	resolver_short={"local":"local","diff_metro":"diff_metro","same_region":"same_R","neighboring_subregion":"neigh_subR","neighboring_region":"neigh_R","non-neighboring_region":"non-neigh_R"}
@@ -1957,6 +2153,49 @@ def internetUserPopulation(countries):
 	for region in regions:
 		print ("% Internet Users from ",region," : ",100*dataPerRegion[region]/totalPerRegion[region])
 
+def longest_matching_prefix(ip_address, prefix_list):
+    # Convert the IP address to an IPv4Address object
+    ip_address = ipaddress.IPv4Address(ip_address)
+
+    # Initialize variables to store the longest prefix and its length
+    longest_prefix = None
+    longest_length = 0
+
+    # Iterate through each prefix in the list
+    for prefix in prefix_list:
+        # Parse the prefix into an IPv4Network object
+        network = ipaddress.IPv4Network(prefix, strict=False)
+
+        # Check if the IP address is in the network
+        if ip_address in network:
+            # Update the longest prefix if the current prefix is longer
+            if network.prefixlen > longest_length:
+                longest_prefix = prefix
+                longest_length = network.prefixlen
+
+    return longest_prefix
+
+def createPrefixlist():
+    googleCloudIPs=json.load(open("data/googleCloudIPs.json"))
+    googleNativeIPs=json.load(open("data/googleNativeIPs.json"))
+    amazonIPs=json.load(open("data/amazonIPs.json"))
+
+    cloudPrefixes=set()
+    for prefixDict in googleCloudIPs["prefixes"]:
+        if "ipv4Prefix" in prefixDict:
+            cloudPrefixes.add(prefixDict["ipv4Prefix"])
+
+    nativePrefixes=set()
+    for prefixDict in googleNativeIPs["prefixes"]:
+        if "ipv4Prefix" in prefixDict:
+            nativePrefixes.add(prefixDict["ipv4Prefix"])
+
+    amazonPrefixes=set()
+    for prefixDict in amazonIPs["prefixes"]:
+        if "ip_prefix" in prefixDict and prefixDict["service"]=="CLOUDFRONT":
+            amazonPrefixes.add(prefixDict["ip_prefix"])
+
+    return cloudPrefixes,nativePrefixes,amazonPrefixes
 
 def expectedPlots():
 
@@ -2006,14 +2245,6 @@ def expectedPlots():
 		plt.grid()
 		plt.savefig("graphs/expectedPlot_"+approachName)
 		plt.clf()
-
-
-
-
-
-
-
-
 
 if __name__ == "__main__":
 
@@ -2193,8 +2424,8 @@ if __name__ == "__main__":
 	}
 
 
-# 	latencyResult=json.load(open("results/"+country+"/PingRipeResult.json"))
-# 	cdnMap=json.load(open("results/"+country+"/cdn_mapping.json"))	
+	# latencyResult=json.load(open("results/"+country+"/PingRipeResult.json"))
+	# cdnMap=json.load(open("results/"+country+"/cdn_mapping.json"))	
 
 # 	# findServers("Akamai",vantagePoints,country,latencyResult,cdnMap)
 
@@ -2225,12 +2456,62 @@ if __name__ == "__main__":
 				    "GH":['Facebook', 'EdgeCast', 'StackPath', 'CDN77', 'Cloudfront', 'Fastly', 'Google', 'Akamai', 'Cloudflare',"Yahoo"],
 				    "DZ":['EdgeCast','Facebook', 'CDN77', 'Cloudfront', 'Fastly', 'Akamai', 'Google', 'Cloudflare',"Yahoo"]
 	}
+
+	# countries=["US","IN","ZA"]
+	# cdnCountryMap={"BR":["Cloudfront"],
+	# 				"GB":["Cloudfront"],
+	# 				"ZA":["Cloudfront"],
+	# 				"CN":["Cloudfront"],
+	# 				"AU":["Cloudfront"],
+	# 				"IN":["Cloudfront"],
+	# 				"TR":["Cloudfront"],
+	# 				"RU":["Cloudfront"],
+	# 				"DE":["Cloudfront"],
+	# 				"US":["Cloudfront"],
+	# 				"ID":["Cloudfront"],
+	# 				"AE":["Cloudfront"], 
+    # 				"FR":["Cloudfront"],
+    # 				"AR":["Cloudfront"],
+	# 			    "NG":["Cloudfront"],
+	# 			    "EG":["Cloudfront"],
+	# 			    "ES":["Cloudfront"], 
+	# 			    "GH":["Cloudfront"],
+	# 			    "DZ":["Cloudfront"]
+	# }
+	# countries=["IN"]
+
 	#imp two commands to collect results and plot the graphs.
-	# computeCDFDistance(countries,cdnCountryMap,resolver_dict)
-	# for country in countries:
-	# 	for cdn in cdnCountryMap[country]:
-	# 		print (country,cdn,classification(cdn,country))
-	# 	print ("\n\n")
+	computeCDFDistance(countries,cdnCountryMap,resolver_dict)
+	anycastGoogleCustomers=[]
+	for country in ["BR","IN","RU"]:
+	# for country in ["IN"]:
+		if country=="AU":
+			vantagePoints=["local","diff_metro","same_region","neighboring_region","non-neighboring_region"]
+		else:
+			vantagePoints=["local","diff_metro","same_region","neighboring_subregion","neighboring_region","non-neighboring_region"]
+		latencyResult=json.load(open("results/"+country+"/PingRipeResult.json"))
+		cdnMap=json.load(open("results/"+country+"/cdn_mapping.json"))
+		results=json.load(open("results/"+country+"/"+"RTTs.json"))
+		plotrttCDFsMixedApproach(country,results,resolver_dict,vantagePoints,"Google")
+		plotrttCDFsMixedApproach(country,results,resolver_dict,vantagePoints,"Fastly")
+		res,localized,non_localized=customerSpecificVariation("Google",cdnMap,vantagePoints,country,latencyResult)
+		if len(non_localized)>0:
+			anycastGoogleCustomers.append(list(non_localized))
+	print ("\n","Google customers using Anycast: ",set.intersection(*map(set,anycastGoogleCustomers)))
+
+	distance_dict=json.load(open("results/k-distGoogleRankings.json"))
+	# KSThreshold(countries,distance_dict)
+	# countries=["BR","GB","ZA","CN","AU","IN","TR","RU","DE","ID","AE","AR","FR","US","NG","EG"]
+	# plotKSValues(countries,distance_dict)
+	# plotKSValuesLessPopular(countries,distance_dict)
+	plotKSValuesCDN([],distance_dict,"CDNs")
+	# compareEdgioAusIPs()
+
+	exit()
+	for country in countries:
+		for cdn in cdnCountryMap[country]:
+			print (country,cdn,classification(cdn,country))
+		print ("\n\n")
 
 					
 
@@ -2244,7 +2525,7 @@ if __name__ == "__main__":
 	# contentSizeType(countries)
 
 	anycastGoogleCustomers=[]
-	for country in ["BR","IN"]:
+	for country in ["BR","IN","RU"]:
 		if country=="AU":
 			vantagePoints=["local","diff_metro","same_region","neighboring_region","non-neighboring_region"]
 		else:
@@ -2261,12 +2542,12 @@ if __name__ == "__main__":
 
 
 
-	# distance_dict=json.load(open("results/k-distGoogleRankings.json"))
+	distance_dict=json.load(open("results/k-distGoogleRankings.json"))
 	# KSThreshold(countries,distance_dict)
 	# countries=["BR","GB","ZA","CN","AU","IN","TR","RU","DE","ID","AE","AR","FR","US","NG","EG"]
 	# plotKSValues(countries,distance_dict)
 	# plotKSValuesLessPopular(countries,distance_dict)
-	# plotKSValuesCDN([],distance_dict,"CDNs")
+	plotKSValuesCDN([],distance_dict,"CDNs")
 	# compareEdgioAusIPs()
 
 
