@@ -1,0 +1,179 @@
+{
+  "countries": [
+    "US",
+    "BR",
+    "AR",
+    "GB",
+    "FR",
+    "ES",
+    "TR",
+    "RU",
+    "DE",
+    "CN",
+    "IN",
+    "ID",
+    "AE",
+    "DZ",
+    "ZA",
+    "EG",
+    "GH",
+    "NG",
+    "AU"
+  ],
+  "resolver_labels": {
+    "CN": {
+      "local": "local(Hangzhou, China)",
+      "diff_metro": "diff_metro(Shanghai,China)",
+      "same_region": "same_region(Japan)",
+      "neighboring_region": "neigh_region(Germany)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "IN": {
+      "local": "local(Mumbai,India)",
+      "diff_metro": "diff_metro(Bengaluru,India)",
+      "same_region": "same_region(Pakistan)",
+      "neighboring_region": "neigh_region(Germany)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "ID": {
+      "local": "local(Jakarta,Indonesia)",
+      "diff_metro": "diff_metro(Madiun,Indonesia)",
+      "same_region": "same_region(Vietnam)",
+      "neighboring_region": "neigh_region(Germany)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "AE": {
+      "local": "local(Dubai,UAE)",
+      "diff_metro": "diff_metro(Sharjah,UAE)",
+      "same_region": "same_region(Saudi Arabia)",
+      "neighboring_region": "neigh_region(Germany)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "DZ": {
+      "local": "local(Souk Ahras,Algeria)",
+      "diff_metro": "diff_metro(Algiers,Algeria)",
+      "same_region": "same_region(Egypt)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "GH": {
+      "local": "local(Kumasi,Ghana)",
+      "diff_metro": "diff_metro(Prestea,Ghana)",
+      "same_region": "same_region(Nigeria)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "ZA": {
+      "local": "local(Piet Retief,South Africa)",
+      "diff_metro": "diff_metro(Prestondale,South Africa)",
+      "same_region": "same_region(Zimbabwe)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "NG": {
+      "local": "local(Abuja,Nigeria)",
+      "diff_metro": "diff_metro(Lagos,Nigeria)",
+      "same_region": "same_region(Ghana)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "EG": {
+      "local": "local(Al Khankah,Egypt)",
+      "diff_metro": "diff_metro(Cairo,Egypt)",
+      "same_region": "same_region(Algeria)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "US": {
+      "local": "local(Indianapolis,US)",
+      "diff_metro": "diff_metro(San Francisco,US)",
+      "same_region": "same_region(Canada)",
+      "neighboring_region": "neigh_region(Germany)",
+      "non-neighboring_region": "non-neigh_region(India)"
+    },
+    "AR": {
+      "local": "local(San Isidro,Argentina)",
+      "diff_metro": "diff_metro(Buenos Aires,Argentina)",
+      "same_region": "same_region(Brazil)",
+      "neighboring_region": "neigh_region(Germany)",
+      "non-neighboring_region": "non-neigh_region(India)"
+    },
+    "BR": {
+      "local": "local(Anapolis,Brazil)",
+      "diff_metro": "diff_metro(Cotia,Brazil)",
+      "same_region": "same_region(Argentina)",
+      "neighboring_region": "neigh_region(Germany)",
+      "non-neighboring_region": "non-neigh_region(India)"
+    },
+    "GB": {
+      "local": "local(Brighton,UK)",
+      "diff_metro": "diff_metro(Maidenhead,UK)",
+      "same_region": "same_region(Sweden)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "TR": {
+      "local": "local(Antalya,Turkey)",
+      "diff_metro": "diff_metro(Istanbul,Turkey)",
+      "same_region": "same_region(Italy)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "RU": {
+      "local": "local(Ryazan',Russia)",
+      "diff_metro": "diff_metro(Polyany,Russia)",
+      "same_region": "same_region(Poland)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "DE": {
+      "local": "local('Donzdorf',Germany)",
+      "diff_metro": "diff_metro('Munich',Germany)",
+      "same_region": "same_region(France)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "FR": {
+      "local": "local(Paris,France)",
+      "diff_metro": "diff_metro(Roubaix,France)",
+      "same_region": "same_region(Netherlands)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "ES": {
+      "local": "local(Morales,Spain)",
+      "diff_metro": "diff_metro(Madrid,Spain)",
+      "same_region": "same_region(Italy)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    },
+    "AU": {
+      "local": "local(New Castle,Australia)",
+      "diff_metro": "diff_metro(Sydney,Australia)",
+      "same_region": "same_region(New Zealand)",
+      "neighboring_region": "neigh_region(India)",
+      "non-neighboring_region": "non-neigh_region(Argentina)"
+    }
+  },
+  "cdn_country_map": {
+    "BR": ["Cloudflare", "Google", "Akamai", "Cloudfront", "Fastly", "EdgeCast", "Azion", "CDN77"],
+    "GB": ["Cloudflare", "Google", "Akamai", "Cloudfront", "Fastly", "CDN77", "EdgeCast"],
+    "ZA": ["EdgeCast", "Cloudfront", "Fastly", "Akamai", "Google", "Cloudflare"],
+    "CN": ["Cloudflare", "Google", "Akamai", "Cloudfront", "Fastly", "Tencent", "CDN77", "EdgeCast", "Taobao"],
+    "AU": ["EdgeCast", "Cloudfront", "Fastly", "Akamai", "Google", "Cloudflare"],
+    "IN": ["EdgeCast", "Cloudfront", "Fastly", "Akamai", "Google", "Cloudflare", "CDN77"],
+    "TR": ["EdgeCast", "CDN77", "Medianova", "Fastly", "Cloudfront", "Akamai", "Google", "Cloudflare"],
+    "RU": ["EdgeCast", "CDN77", "NGENIX", "Cloudfront", "Fastly", "Akamai", "Google", "Cloudflare"],
+    "DE": ["Cloudflare", "Akamai", "Google", "Cloudfront", "Fastly", "CDN77", "Yahoo", "EdgeCast"],
+    "US": ["EdgeCast", "Cloudfront", "Fastly", "Akamai", "Google", "Cloudflare", "Yahoo", "CDN77"],
+    "ID": ["EdgeCast", "Taobao", "CDN77", "Facebook", "Fastly", "Cloudfront", "Akamai", "Google", "Cloudflare", "Yahoo"],
+    "AE": ["EdgeCast", "CDN77", "StackPath", "Fastly", "Cloudfront", "Akamai", "Google", "Cloudflare"],
+    "FR": ["StackPath", "Level3", "CDN77", "EdgeCast", "Fastly", "Cloudfront", "Google", "Akamai", "Cloudflare", "Yahoo"],
+    "AR": ["EdgeCast", "Facebook", "BunnyCDN", "CDN77", "StackPath", "Fastly", "Cloudfront", "Akamai", "Google", "Cloudflare", "Yahoo"],
+    "NG": ["EdgeCast", "Facebook", "MicrosoftAzure", "Taobao", "CDN77", "StackPath", "Fastly", "Cloudfront", "Akamai", "Google", "Cloudflare"],
+    "EG": ["EdgeCast", "Facebook", "MicrosoftAzure", "Level3", "Taobao", "CDN77", "StackPath", "Fastly", "Cloudfront", "Akamai", "Google", "Cloudflare"],
+    "ES": ["EdgeCast", "StackPath", "CDN77", "Cloudfront", "Fastly", "Google", "Akamai", "Cloudflare"],
+    "GH": ["Facebook", "EdgeCast", "StackPath", "CDN77", "Cloudfront", "Fastly", "Google", "Akamai", "Cloudflare", "Yahoo"],
+    "DZ": ["EdgeCast", "Facebook", "CDN77", "Cloudfront", "Fastly", "Akamai", "Google", "Cloudflare", "Yahoo"]
+  }
+}
