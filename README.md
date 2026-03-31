@@ -1,4 +1,4 @@
-# NINeS CDN Replica Selection Measurements and Analysis
+# Who Holds the Steering Wheel? Opacity and Consolidation in CDN Replica Selection
 
 This repository contains the public workflow for measuring and analyzing CDN replica selection across multiple resolver locations using RIPE Atlas DNS and ping measurements.
 
@@ -7,6 +7,25 @@ The workflow has three main steps:
 1. Run DNS measurements for a country against CDN-mapped domains using multiple resolver locations.
 2. Run ping measurements to the replica IPs discovered by DNS.
 3. Analyze the DNS and ping results to build RTT datasets, generate CDF plots, and compute resolver-scope KS distances.
+
+## Citation
+
+If you use this repository or build on this dataset or methodology, please cite the paper:
+
+- Rashna Kumar, Fabián E. Bustamante, and Marcel Flores. "Who Holds the Steering Wheel? Opacity and Consolidation in CDN Replica Selection." 1st New Ideas in Networked Systems (NINeS 2026), Article 23. DOI: `10.4230/OASIcs.NINeS.2026.23`
+
+```bibtex
+@inproceedings{kumar2026steeringwheel,
+  author = {Kumar, Rashna and Bustamante, Fabi{\'a}n E. and Flores, Marcel},
+  title = {Who Holds the Steering Wheel? Opacity and Consolidation in CDN Replica Selection},
+  booktitle = {1st New Ideas in Networked Systems (NINeS 2026)},
+  series = {OASIcs},
+  year = {2026},
+  articleno = {23},
+  doi = {10.4230/OASIcs.NINeS.2026.23},
+  publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}
+}
+```
 
 ## Repository Layout
 
@@ -167,7 +186,16 @@ Runtime measurement state:
 - `dnsRipeMsmIds_<vantage>.json`
 - `PingRipeMsmIds.json`
 
-Country folders may also contain resource-collection or auxiliary analysis files such as `ResourcesF.json`, `ResourcescdnMapping.json`, `ResourcesDomainsF.json`, and `resourcesSizeType_*.json`. 
+Country folders may also contain resource-collection or auxiliary analysis files such as:
+
+- `ResourcesF.json`
+  - collected resource URLs observed for the country
+- `ResourcescdnMapping.json`
+  - mapping from CDN name to associated resource URLs
+- `ResourcesDomainsF.json`
+  - collected resource-domain lists from the earlier resource workflow
+- `resourcesSizeType_*.json`
+  - per-CDN resource metadata such as object size and content type
 
 ## Main Workflow
 
@@ -211,24 +239,3 @@ Outputs produced by the workflow:
 - `results/resolver_scope_ks_distances.csv`
 - `results/resolver_scope_ks_distances.json`
 - `graphs/<country>/*.pdf`
-
-## Citation
-
-If you use this repository or build on this dataset or methodology, please cite the paper:
-
-- Rashna Kumar, Fabián E. Bustamante, and Marcel Flores. "Who Holds the Steering Wheel? Opacity and Consolidation in CDN Replica Selection." 1st New Ideas in Networked Systems (NINeS 2026), Article 23. DOI: `10.4230/OASIcs.NINeS.2026.23`
-
-BibTeX:
-
-```bibtex
-@inproceedings{kumar2026steeringwheel,
-  author = {Kumar, Rashna and Bustamante, Fabi{\'a}n E. and Flores, Marcel},
-  title = {Who Holds the Steering Wheel? Opacity and Consolidation in CDN Replica Selection},
-  booktitle = {1st New Ideas in Networked Systems (NINeS 2026)},
-  series = {OASIcs},
-  year = {2026},
-  articleno = {23},
-  doi = {10.4230/OASIcs.NINeS.2026.23},
-  publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}
-}
-```
