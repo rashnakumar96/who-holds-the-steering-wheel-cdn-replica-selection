@@ -12,7 +12,7 @@ The workflow has three main steps:
 
 If you use this repository or build on this dataset or methodology, please cite the paper:
 
-- Rashna Kumar, Fabián E. Bustamante, and Marcel Flores. "Who Holds the Steering Wheel? Opacity and Consolidation in CDN Replica Selection." 1st New Ideas in Networked Systems (NINeS 2026), Article 23. DOI: `10.4230/OASIcs.NINeS.2026.23`
+- Rashna Kumar, Fabián E. Bustamante, and Marcel Flores. Who Holds the Steering Wheel? Opacity and Consolidation in CDN Replica Selection. In 1st New Ideas in Networked Systems (NINeS 2026). Open Access Series in Informatics (OASIcs), Volume 139, pp. 23:1-23:23, Schloss Dagstuhl – Leibniz-Zentrum für Informatik (2026) https://doi.org/10.4230/OASIcs.NINeS.2026.23
 
 ```bibtex
 @InProceedings{kumar_et_al:OASIcs.NINeS.2026.23,
