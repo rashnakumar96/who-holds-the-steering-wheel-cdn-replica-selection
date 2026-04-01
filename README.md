@@ -15,15 +15,23 @@ If you use this repository or build on this dataset or methodology, please cite 
 - Rashna Kumar, Fabián E. Bustamante, and Marcel Flores. "Who Holds the Steering Wheel? Opacity and Consolidation in CDN Replica Selection." 1st New Ideas in Networked Systems (NINeS 2026), Article 23. DOI: `10.4230/OASIcs.NINeS.2026.23`
 
 ```bibtex
-@inproceedings{kumar2026steeringwheel,
-  author = {Kumar, Rashna and Bustamante, Fabi{\'a}n E. and Flores, Marcel},
-  title = {Who Holds the Steering Wheel? Opacity and Consolidation in CDN Replica Selection},
-  booktitle = {1st New Ideas in Networked Systems (NINeS 2026)},
-  series = {OASIcs},
-  year = {2026},
-  articleno = {23},
-  doi = {10.4230/OASIcs.NINeS.2026.23},
-  publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik}
+@InProceedings{kumar_et_al:OASIcs.NINeS.2026.23,
+  author =	{Kumar, Rashna and Bustamante, Fabi\'{a}n E. and Flores, Marcel},
+  title =	{{Who Holds the Steering Wheel? Opacity and Consolidation in CDN Replica Selection}},
+  booktitle =	{1st New Ideas in Networked Systems (NINeS 2026)},
+  pages =	{23:1--23:23},
+  series =	{Open Access Series in Informatics (OASIcs)},
+  ISBN =	{978-3-95977-414-7},
+  ISSN =	{2190-6807},
+  year =	{2026},
+  volume =	{139},
+  editor =	{Argyraki, Katerina and Panda, Aurojit},
+  publisher =	{Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik},
+  address =	{Dagstuhl, Germany},
+  URL =		{https://drops.dagstuhl.de/entities/document/10.4230/OASIcs.NINeS.2026.23},
+  URN =		{urn:nbn:de:0030-drops-256085},
+  doi =		{10.4230/OASIcs.NINeS.2026.23},
+  annote =	{Keywords: CDN, replica selection, Anycast, Regional Anycast, DNS, consolidation, centralization}
 }
 ```
 
